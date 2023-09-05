@@ -4,29 +4,28 @@ import styled from 'styled-components'
 
 interface MarkdownInputProps {
 	value: string,
-	onChange: (value: ChangeEvent<HTMLInputElement>) => void
+	onChange: (event: ChangeEvent<HTMLTextAreaElement>) => void
 }
 
 
 export default function MarkdownInput(prop: MarkdownInputProps) {
 
 	const InputContainer = styled.textarea`
-		rows: 5;
-		cols: 5;
+		width: 100%;
+		border: 2px solid white;
+		border-radius: 10px;
+		color:white;
   `;
 
-	const StyledTextArea = styled.textarea`
-
-
+	const StyledTextArea = styled.div`
+	
 	`;
 
-
 	return (
-		<>
-			<textarea onChange={prop.onChange}>
-
-			</textarea>
-		</>
+		// <StyledTextArea>
+		<InputContainer onChange={prop.onChange} value={prop.value}></InputContainer>
+		// <InputContainer onChange={prop.onChange}></InputContainer>
+		// </StyledTextArea>
 	)
 
 }
