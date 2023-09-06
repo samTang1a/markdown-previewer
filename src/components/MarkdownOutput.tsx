@@ -6,10 +6,10 @@ interface MarkdownOutputProps {
 }
 
 const MarkdownOutputStyle = styled.div`
-border: 2px solid black;
-width: 100%;
-height: 80vh;
-border-radius: 10px;
+	border: 2px solid black;
+	width: 100%;
+	height: 80vh;
+	border-radius: 10px;
 `;
 
 export default function MarkdownOutput(prop: MarkdownOutputProps) {

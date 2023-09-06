@@ -5,6 +5,10 @@ interface HeaderProps {
 }
 
 const Button = styled.button`
+	&:hover {
+		background: white;
+		color:black;
+	}
 `;
 
 const Title = styled.h2`
