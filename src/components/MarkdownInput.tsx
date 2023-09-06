@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from 'react';
+import { ChangeEvent } from 'react';
 
 import styled from 'styled-components'
 
@@ -8,24 +8,25 @@ interface MarkdownInputProps {
 }
 
 
+const InputContainer = styled.textarea`
+	width: 100%;
+	height: 80vh;
+	border: 2px solid white;
+	border-radius: 10px;
+	color: white;
+`;
+
+const StyledTextArea = styled.div`
+
+`;
+
 export default function MarkdownInput(prop: MarkdownInputProps) {
 
-	const InputContainer = styled.textarea`
-		width: 100%;
-		border: 2px solid white;
-		border-radius: 10px;
-		color:white;
-  `;
-
-	const StyledTextArea = styled.div`
-	
-	`;
-
 	return (
-		// <StyledTextArea>
-		<InputContainer onChange={prop.onChange} value={prop.value}></InputContainer>
-		// <InputContainer onChange={prop.onChange}></InputContainer>
-		// </StyledTextArea>
+		<>
+			<StyledTextArea>Input</StyledTextArea>
+			<InputContainer onChange={prop.onChange} value={prop.value}></InputContainer>
+		</>
 	)
 
 }

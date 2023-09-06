@@ -6,7 +6,7 @@ import MarkdownOutput from './MarkdownOutput'
 
 export default function App() {
 
-	const [markdown, setMarkdown] = useState(`#Hellow World`)
+	const [markdown, setMarkdown] = useState(`# Hello World`)
 	const [showGuide, setShowGuide] = useState(false)
 
 	let onToggleGuide = () => {
@@ -20,7 +20,7 @@ export default function App() {
 	return (
 		<div className='container'>
 			<Header onToggleGuide={onToggleGuide} />
-			{ showGuide ?	<MarkdownGuide/> : null }
+			<MarkdownGuide showGuide={showGuide} onToggleGuide={onToggleGuide}/>
 				
 			<div className='row pt-2'>
 				<div className='col-sm-6' >
