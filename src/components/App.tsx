@@ -27,7 +27,7 @@ export default function App() {
 					<MarkdownInput onChange={handleChange} value={markdown} />
 				</div>
 				<div className='col-sm-6'>
-					<MarkdownOutput markdown={markdown}/>
+					<MarkdownOutput markdown={markdown} />
 				</div>
 			</div>
 		</div>
